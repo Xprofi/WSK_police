@@ -1,14 +1,13 @@
-package ru.petrolplus.wsk_police.SingIn
+package ru.petrolplus.wsk_police.Main
 
-
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import ru.petrolplus.wsk_police.R
 
-class SingInActivity : AppCompatActivity() {
+class Main : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_main)
     }
 }
