@@ -1,10 +1,11 @@
-package ru.petrolplus.wsk_police
+package ru.petrolplus.wsk_police.SingIn
 
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ru.petrolplus.wsk_police.R
 
-class MainActivity : AppCompatActivity() {
+class SingInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
