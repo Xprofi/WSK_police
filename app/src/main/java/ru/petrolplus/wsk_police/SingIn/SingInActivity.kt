@@ -2,11 +2,13 @@ package ru.petrolplus.wsk_police.SingIn
 
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sign_in.*
+import ru.petrolplus.wsk_police.BaseActivityFun
+import ru.petrolplus.wsk_police.Main.MainActivity
 import ru.petrolplus.wsk_police.R
 
-class SingInActivity : AppCompatActivity() {
+class SingInActivity : BaseActivityFun() {
 
     var signInPresenter: SignInPresenter? = null
 
@@ -14,11 +16,15 @@ class SingInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+        //инициальзируем призентер
         signInPresenter =  SignInPresenter(this)
 
 
         setImageCaptcha()
         newCaptchaOnClick()
+        captchaCheckButton()
+        logInButton()
+        guestButton()
 
     }
 
@@ -34,9 +40,32 @@ class SingInActivity : AppCompatActivity() {
     }
 
 
+    fun captchaCheckButton(){
+        captcha_check_button.setOnClickListener {
+            Toast.makeText(this,signInPresenter?.checkCaptcha(captcha_edit.text.toString()).toString(),Toast.LENGTH_LONG).show()
+
+        }
+    }
+
+
+    fun logInButton(){
+        log_in_button.setOnClickListener {
+            signInPresenter?.showCaptcha()
+        }
+    }
+
+    fun guestButton(){
+        guest_button.setOnClickListener {
+            startActivity(MainActivity())
+        }
+    }
+
+
     private fun setImageCaptcha(){
         captcha_image.setImageBitmap(signInPresenter?.captchaImage())
     }
+
+
 
 
 
