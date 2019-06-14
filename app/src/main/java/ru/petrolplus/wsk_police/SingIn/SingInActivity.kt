@@ -2,6 +2,7 @@ package ru.petrolplus.wsk_police.SingIn
 
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import ru.petrolplus.wsk_police.BaseActivityFun
@@ -25,6 +26,7 @@ class SingInActivity : BaseActivityFun() {
         captchaCheckButton()
         logInButton()
         guestButton()
+
 
     }
 
@@ -51,6 +53,7 @@ class SingInActivity : BaseActivityFun() {
     fun logInButton(){
         log_in_button.setOnClickListener {
             signInPresenter?.showCaptcha()
+            signInPresenter?.login(login_edit.text.toString(),password_edit.text.toString())
         }
     }
 
@@ -63,6 +66,16 @@ class SingInActivity : BaseActivityFun() {
 
     private fun setImageCaptcha(){
         captcha_image.setImageBitmap(signInPresenter?.captchaImage())
+    }
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+        if (login_button_layout.visibility == View.GONE){
+            login_button_layout.visibility = View.VISIBLE
+            captcha_layout.visibility = View.GONE
+        }else{
+            finish()
+        }
     }
 
 

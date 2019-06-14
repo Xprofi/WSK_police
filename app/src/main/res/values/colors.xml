@@ -6,4 +6,10 @@
     <color name="headerColor">#48AEBA</color>
 
 
+    <color name="white">#FFFFFF</color>
+    <color name="ERROR_MESSAGE">#F44336</color>
+    <color name="GOOD_MESSAGE">#4CAF50</color>
+    <color name="DEFAULT_MESSAGE">#009688</color>
+
+
 </resources>

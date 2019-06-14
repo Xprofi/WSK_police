@@ -21,6 +21,8 @@ class SignInPresenter(private val singInActivity: SingInActivity) {
             .build()
 
 
+    private val signInNtwork: SignInNtwork = SignInNtwork(this)
+
     fun captchaImage(): Bitmap?{
        return captchaGenerator.generateCaptcha(singInActivity)
     }
@@ -34,6 +36,11 @@ class SignInPresenter(private val singInActivity: SingInActivity) {
     fun showCaptcha(){
         singInActivity.captcha_layout.visibility = VISIBLE
         singInActivity.login_button_layout.visibility = GONE
+    }
+
+
+    fun login(login: String, password: String){
+        signInNtwork.login(login,password)
     }
 
 }
