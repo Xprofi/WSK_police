@@ -47,6 +47,9 @@ class SingInActivity : BaseActivityFun() {
         captcha_check_button.setOnClickListener {
             signInPresenter?.let {
                 if(it.checkCaptcha(captcha_edit.text.toString())){
+                    if (check_remember_me.isChecked){
+                        saveUser(login_edit.text.toString(),password_edit.text.toString())
+                    }
                     startActivity(MainActivity())
                 }else{
                    showMassage(this.resources.getString(R.string.captcha_uncorrected),TypeMessage.ERROR)

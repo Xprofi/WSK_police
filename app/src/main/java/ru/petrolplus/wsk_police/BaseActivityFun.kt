@@ -13,12 +13,15 @@ import com.google.android.material.snackbar.Snackbar
 
 
 import androidx.constraintlayout.widget.ConstraintLayout
+import de.adorsys.android.securestoragelibrary.SecurePreferences
 import kotlinx.android.synthetic.main.request_indicator.view.*
+import ru.petrolplus.wsk_police.DataObject.User
 
 
 open class BaseActivityFun: AppCompatActivity() {
 
     lateinit var doingAlert: Dialog
+
 
     fun startActivity(activity: AppCompatActivity){
         val intent = Intent(this, activity ::class.java)
@@ -66,12 +69,29 @@ open class BaseActivityFun: AppCompatActivity() {
 
 
 
+    fun saveUser(login: String, password: String){
+        SecurePreferences.setValue(this,SecurityKey.LOGIN.name,login)
+        SecurePreferences.setValue(this,SecurityKey.PASSWORD.name,login)
+    }
+
+
+    fun getUser(): User{
+        return User("",SecurePreferences.getStringValue(this,SecurityKey.LOGIN.name,"") ?: ""
+                            ,SecurePreferences.getStringValue(this,SecurityKey.PASSWORD.name,"") ?: "","")
+    }
+
+
 
 
     enum class TypeMessage {
         ERROR,
         DEFAULT,
         GOOD
+    }
+
+    enum class SecurityKey{
+        LOGIN,
+        PASSWORD
     }
 
 
