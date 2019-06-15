@@ -4,5 +4,6 @@
     <string name="password">password</string>
     <string name="remember_me">remember me</string>
     <string name="guest">Guest</string>
-
+    <string name="request">request</string>
+    <string name="message_alert_dialog">...</string>
 </resources>
