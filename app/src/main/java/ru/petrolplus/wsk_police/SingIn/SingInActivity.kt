@@ -53,7 +53,7 @@ class SingInActivity : BaseActivityFun() {
 
     fun logInButton(){
         log_in_button.setOnClickListener {
-            signInPresenter?.showCaptcha()
+           // signInPresenter?.showCaptcha()
             signInPresenter?.login(login_edit.text.toString(),password_edit.text.toString())
         }
     }

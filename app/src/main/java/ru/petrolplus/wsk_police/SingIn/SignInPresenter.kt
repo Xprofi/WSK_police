@@ -1,16 +1,14 @@
 package ru.petrolplus.wsk_police.SingIn
 
 import android.R
-import android.app.Activity
 import android.graphics.Bitmap
 import android.graphics.Color
-import android.opengl.Visibility
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import ru.petrolplus.wsk_police.SingIn.model.CaptchaGenerator
 
-class SignInPresenter(private val singInActivity: SingInActivity) {
+class SignInPresenter(val sigInActivity: SingInActivity) {
 
     private val captchaGenerator: CaptchaGenerator =
         CaptchaGenerator.Builder()
@@ -24,7 +22,7 @@ class SignInPresenter(private val singInActivity: SingInActivity) {
     private val signInNtwork: SignInNtwork = SignInNtwork(this)
 
     fun captchaImage(): Bitmap?{
-       return captchaGenerator.generateCaptcha(singInActivity)
+       return captchaGenerator.generateCaptcha(sigInActivity)
     }
 
 
@@ -34,13 +32,14 @@ class SignInPresenter(private val singInActivity: SingInActivity) {
 
 
     fun showCaptcha(){
-        singInActivity.captcha_layout.visibility = VISIBLE
-        singInActivity.login_button_layout.visibility = GONE
+        sigInActivity.captcha_layout.visibility = VISIBLE
+        sigInActivity.login_button_layout.visibility = GONE
     }
 
 
     fun login(login: String, password: String){
-        signInNtwork.login(login,password)
+        signInNtwork.login(login,password,this)
+        sigInActivity.doingAlert(sigInActivity.resources.getString(ru.petrolplus.wsk_police.R.string.request))
     }
 
 }

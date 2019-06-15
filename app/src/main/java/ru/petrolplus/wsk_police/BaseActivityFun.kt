@@ -53,9 +53,17 @@ open class BaseActivityFun: AppCompatActivity() {
         view.message_textView.text = message
         alert.setView(view)
         alert.setCancelable(false)
-        alert.create()
-        alert.show()
+        doingAlert = alert.create()
+        doingAlert.show()
     }
+
+
+    fun doingAlertClose(){
+       doingAlert.dismiss()
+       doingAlert.cancel()
+    }
+
+
 
 
 
