@@ -1,26 +1,24 @@
 package ru.petrolplus.wsk_police
 
-import android.app.ActionBar
+
 import android.app.Dialog
 import android.content.Intent
-import android.view.View
-import android.view.ViewGroup
+import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
-
-
-import androidx.constraintlayout.widget.ConstraintLayout
 import de.adorsys.android.securestoragelibrary.SecurePreferences
 import kotlinx.android.synthetic.main.request_indicator.view.*
-import ru.petrolplus.wsk_police.DataObject.User
 
 
 open class BaseActivityFun: AppCompatActivity() {
 
     lateinit var doingAlert: Dialog
+
 
 
     fun startActivity(activity: AppCompatActivity){
@@ -71,14 +69,16 @@ open class BaseActivityFun: AppCompatActivity() {
 
     fun saveUser(login: String, password: String){
         SecurePreferences.setValue(this,SecurityKey.LOGIN.name,login)
-        SecurePreferences.setValue(this,SecurityKey.PASSWORD.name,login)
+        SecurePreferences.setValue(this,SecurityKey.PASSWORD.name,password)
     }
 
 
-    fun getUser(): User{
-        return User("",SecurePreferences.getStringValue(this,SecurityKey.LOGIN.name,"") ?: ""
-                            ,SecurePreferences.getStringValue(this,SecurityKey.PASSWORD.name,"") ?: "","")
+    fun logoutUser(){
+        SecurePreferences.clearAllValues(this)
     }
+
+
+
 
 
 

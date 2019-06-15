@@ -28,6 +28,9 @@ class SingInActivity : BaseActivityFun() {
         guestButton()
 
 
+        signInPresenter?.checkSaveUserUser()
+
+
 
     }
 

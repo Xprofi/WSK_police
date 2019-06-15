@@ -5,7 +5,9 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import de.adorsys.android.securestoragelibrary.SecurePreferences
 import kotlinx.android.synthetic.main.activity_sign_in.*
+import ru.petrolplus.wsk_police.BaseActivityFun
 import ru.petrolplus.wsk_police.SingIn.model.CaptchaGenerator
 
 class SignInPresenter(val sigInActivity: SingInActivity) {
@@ -17,6 +19,8 @@ class SignInPresenter(val sigInActivity: SingInActivity) {
             .textSize(70F)
             .colorId(Color.BLUE)
             .build()
+
+
 
 
     private val signInNtwork: SignInNtwork = SignInNtwork(this)
@@ -39,9 +43,19 @@ class SignInPresenter(val sigInActivity: SingInActivity) {
     }
 
 
-    fun login(login: String, password: String){
-        signInNtwork.login(login,password)
+    fun login(login: String, password: String, autoSignIn: Boolean = false){
+        signInNtwork.login(login,password,autoSignIn)
         sigInActivity.doingAlert(sigInActivity.resources.getString(ru.petrolplus.wsk_police.R.string.request))
+    }
+
+
+    fun checkSaveUserUser(){
+        if (!SecurePreferences.getStringValue(sigInActivity, BaseActivityFun.SecurityKey.LOGIN.name,"").isNullOrEmpty()){
+            login(SecurePreferences.getStringValue(sigInActivity, BaseActivityFun.SecurityKey.LOGIN.name,"") ?: "",
+                SecurePreferences.getStringValue(sigInActivity, BaseActivityFun.SecurityKey.PASSWORD.name,"") ?: "", true)
+        }else{
+            sigInActivity.login_layout.visibility = VISIBLE
+        }
     }
 
 }
