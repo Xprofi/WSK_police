@@ -27,7 +27,7 @@ open class BaseActivityFun: AppCompatActivity() {
 
 
     fun showMassage(message: String, typeMessage: TypeMessage){
-        var snackbar: Snackbar =   Snackbar.make(window.decorView.findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
+        var snackbar: Snackbar =   Snackbar.make(window.decorView.findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT)
         snackbar.setActionTextColor(ContextCompat.getColor(this,R.color.white))
         when(typeMessage){
             TypeMessage.ERROR ->{

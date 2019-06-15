@@ -6,4 +6,6 @@
     <string name="guest">Guest</string>
     <string name="request">request</string>
     <string name="message_alert_dialog">...</string>
+    <string name="captcha_uncorrected">Captcha uncorrected</string>
+
 </resources>

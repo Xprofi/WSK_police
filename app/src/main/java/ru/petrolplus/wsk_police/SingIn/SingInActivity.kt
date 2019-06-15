@@ -45,7 +45,13 @@ class SingInActivity : BaseActivityFun() {
 
     fun captchaCheckButton(){
         captcha_check_button.setOnClickListener {
-            Toast.makeText(this,signInPresenter?.checkCaptcha(captcha_edit.text.toString()).toString(),Toast.LENGTH_LONG).show()
+            signInPresenter?.let {
+                if(it.checkCaptcha(captcha_edit.text.toString())){
+                    startActivity(MainActivity())
+                }else{
+                   showMassage(this.resources.getString(R.string.captcha_uncorrected),TypeMessage.ERROR)
+                }
+            }
 
         }
     }
@@ -74,6 +80,8 @@ class SingInActivity : BaseActivityFun() {
         if (login_button_layout.visibility == View.GONE){
             login_button_layout.visibility = View.VISIBLE
             captcha_layout.visibility = View.GONE
+            login_edit.isEnabled = true
+            password_edit.isEnabled = true
         }else{
             finish()
         }

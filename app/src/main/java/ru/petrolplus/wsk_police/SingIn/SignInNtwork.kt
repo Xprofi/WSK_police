@@ -11,7 +11,7 @@ class SignInNtwork(var signInPresenter: SignInPresenter) {
     val ntworkClient: NetworkClient = NetworkClient()
 
 
-    fun login(login: String, password: String, signInPresenter: SignInPresenter) {
+    fun login(login: String, password: String) {
         ntworkClient.httpClient().login(login, password).enqueue(
             object : Callback<Authorization> {
 

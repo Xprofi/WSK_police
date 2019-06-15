@@ -34,11 +34,13 @@ class SignInPresenter(val sigInActivity: SingInActivity) {
     fun showCaptcha(){
         sigInActivity.captcha_layout.visibility = VISIBLE
         sigInActivity.login_button_layout.visibility = GONE
+        sigInActivity.login_edit.isEnabled = false
+        sigInActivity.password_edit.isEnabled = false
     }
 
 
     fun login(login: String, password: String){
-        signInNtwork.login(login,password,this)
+        signInNtwork.login(login,password)
         sigInActivity.doingAlert(sigInActivity.resources.getString(ru.petrolplus.wsk_police.R.string.request))
     }
 
