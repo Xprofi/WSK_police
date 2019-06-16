@@ -8,4 +8,10 @@
     <string name="message_alert_dialog">...</string>
     <string name="captcha_uncorrected">Captcha uncorrected</string>
 
+    <string name="main">Main</string>
+    <string name="departments">Departments</string>
+    <string name="show_department">Show department</string>
+    <string name="wanted">Wanted</string>
+    <string name="add_new_wanted">Add New Wanted</string>
+
 </resources>
