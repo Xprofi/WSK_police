@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <declare-styleable name="CustomAppBar">
+            <attr name="back_button_visible" format="boolean" />
+            <attr name="header_text" format="string" />
+        </declare-styleable>
+
+</resources>

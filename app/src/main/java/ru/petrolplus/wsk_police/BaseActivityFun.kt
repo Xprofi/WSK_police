@@ -4,24 +4,21 @@ package ru.petrolplus.wsk_police
 import android.app.Dialog
 import android.content.Intent
 import android.view.WindowManager
-import androidx.appcompat.app.ActionBar
+
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import de.adorsys.android.securestoragelibrary.SecurePreferences
 import kotlinx.android.synthetic.main.request_indicator.view.*
+import ru.petrolplus.wsk_police.common.views.CustomAppBarInterface
+import androidx.appcompat.app.ActionBar as AppActionBar
 
 
-
-
-
-
-
-
-open class BaseActivityFun: AppCompatActivity() {
+open class BaseActivityFun: AppCompatActivity(), CustomAppBarInterface {
 
     lateinit var doingAlert: Dialog
 
@@ -85,24 +82,6 @@ open class BaseActivityFun: AppCompatActivity() {
 
 
 
-     fun actionBar() {
-
-         val layoutParams = Toolbar.LayoutParams( Toolbar.LayoutParams.MATCH_PARENT,  Toolbar.LayoutParams.MATCH_PARENT)
-
-
-         val actionBar = supportActionBar
-         actionBar!!.setDisplayShowHomeEnabled(false)
-         actionBar.setDisplayShowCustomEnabled(true)
-         actionBar.setDisplayShowTitleEnabled(false)
-         val customView = layoutInflater.inflate(R.layout.app_bar, null)
-         actionBar.setCustomView(customView, layoutParams)
-         val parent = customView.parent as Toolbar
-         parent.setPadding(0, 0, 0, 0)//for tab otherwise give space in tab
-         parent.setContentInsetsAbsolute(0, 0)
-
-
-    }
-
 
 
     enum class TypeMessage {
@@ -127,8 +106,7 @@ open class BaseActivityFun: AppCompatActivity() {
     }
 
 
-
-
-
-
+    override fun onBackClick() {
+        finish()
+    }
 }
