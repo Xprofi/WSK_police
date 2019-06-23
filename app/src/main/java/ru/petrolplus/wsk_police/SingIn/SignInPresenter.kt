@@ -23,7 +23,7 @@ class SignInPresenter(val sigInActivity: SingInActivity) {
 
 
 
-    private val signInNtwork: SignInNtwork = SignInNtwork(this)
+    private val signInNtwork: SignInNetwork = SignInNetwork(this)
 
     fun captchaImage(): Bitmap?{
        return captchaGenerator.generateCaptcha(sigInActivity)

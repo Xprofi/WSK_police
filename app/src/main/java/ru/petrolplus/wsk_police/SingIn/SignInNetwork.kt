@@ -7,7 +7,7 @@ import ru.petrolplus.wsk_police.common.DataObject.Authorization
 import ru.petrolplus.wsk_police.Main.MainActivity
 import ru.petrolplus.wsk_police.Utils.NetworkClient
 
-class SignInNtwork(var signInPresenter: SignInPresenter) {
+class SignInNetwork(var signInPresenter: SignInPresenter) {
 
     val ntworkClient: NetworkClient = NetworkClient()
 

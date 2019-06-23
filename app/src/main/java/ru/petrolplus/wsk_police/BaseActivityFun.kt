@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import de.adorsys.android.securestoragelibrary.SecurePreferences
 import kotlinx.android.synthetic.main.request_indicator.view.*
+import ru.petrolplus.wsk_police.SingIn.SingInActivity
 import ru.petrolplus.wsk_police.common.views.CustomAppBarInterface
 import androidx.appcompat.app.ActionBar as AppActionBar
 
@@ -78,6 +79,7 @@ open class BaseActivityFun: AppCompatActivity(), CustomAppBarInterface {
 
     fun logoutUser(){
         SecurePreferences.clearAllValues(this)
+        startActivity(SingInActivity())
     }
 
 
@@ -109,4 +111,6 @@ open class BaseActivityFun: AppCompatActivity(), CustomAppBarInterface {
     override fun onBackClick() {
         finish()
     }
+
+
 }
