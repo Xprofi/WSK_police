@@ -3,7 +3,7 @@ package ru.petrolplus.wsk_police.Utils
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
-import ru.petrolplus.wsk_police.DataObject.*
+import ru.petrolplus.wsk_police.common.DataObject.*
 
 interface ApiDirectory {
 

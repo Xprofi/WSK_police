@@ -3,7 +3,7 @@ package ru.petrolplus.wsk_police.SingIn
 import retrofit2.Call
 import retrofit2.Callback
 import ru.petrolplus.wsk_police.BaseActivityFun
-import ru.petrolplus.wsk_police.DataObject.Authorization
+import ru.petrolplus.wsk_police.common.DataObject.Authorization
 import ru.petrolplus.wsk_police.Main.MainActivity
 import ru.petrolplus.wsk_police.Utils.NetworkClient
 

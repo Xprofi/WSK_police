@@ -1,4 +1,4 @@
-package ru.petrolplus.wsk_police.DataObject
+package ru.petrolplus.wsk_police.common.DataObject
 
 data class Images(
    var id: Int,
