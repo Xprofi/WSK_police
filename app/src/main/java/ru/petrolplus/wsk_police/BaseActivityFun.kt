@@ -49,7 +49,7 @@ open class BaseActivityFun: AppCompatActivity(), CustomAppBarInterface {
     }
 
 
-    fun doingAlert(message: String){
+    fun processAlert(message: String){
         val alert = AlertDialog.Builder(this)
         val view = layoutInflater
             .inflate(resources.getLayout(R.layout.request_indicator), null) as ConstraintLayout
@@ -61,7 +61,7 @@ open class BaseActivityFun: AppCompatActivity(), CustomAppBarInterface {
     }
 
 
-    fun doingAlertClose(){
+    fun processAlertClose(){
        doingAlert.dismiss()
        doingAlert.cancel()
     }

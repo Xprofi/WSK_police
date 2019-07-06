@@ -45,7 +45,7 @@ class SignInPresenter(val sigInActivity: SingInActivity) {
 
     fun login(login: String, password: String, autoSignIn: Boolean = false){
         signInNtwork.login(login,password,autoSignIn)
-        sigInActivity.doingAlert(sigInActivity.resources.getString(ru.petrolplus.wsk_police.R.string.request))
+        sigInActivity.processAlert(sigInActivity.resources.getString(ru.petrolplus.wsk_police.R.string.request))
     }
 
 

@@ -12,7 +12,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".aboutUs.AboutUs">
+        <activity android:name=".departments.Departments"
+                  android:theme="@style/AppThemeNoActionBar">
+        </activity>
+        <activity android:name=".aboutUs.AboutUs"
+                  android:theme="@style/AppThemeNoActionBar">
         </activity>
 
         <meta-data

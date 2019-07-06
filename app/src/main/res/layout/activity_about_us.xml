@@ -7,6 +7,16 @@
         android:layout_height="match_parent"
         tools:context=".aboutUs.AboutUs">
 
+    <ru.petrolplus.wsk_police.common.views.CustomAppBar android:layout_width="0dp"
+                                                        android:layout_height="wrap_content"
+                                                        app:layout_constraintTop_toTopOf="parent"
+                                                        app:layout_constraintEnd_toEndOf="parent"
+                                                        app:layout_constraintStart_toStartOf="parent"
+                                                        android:id="@+id/customAppBar"
+                                                        app:back_button_visible="true"
+                                                        app:header_text="@string/about_us">
+
+    </ru.petrolplus.wsk_police.common.views.CustomAppBar>
     <TextView
             android:text="Example app"
             android:layout_width="0dp"

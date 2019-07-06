@@ -1,6 +1,6 @@
 package ru.petrolplus.wsk_police.common.DataObject
 
-// объект ответа авторизации
-data class Authorization(var data: User,
+
+data class Authorization(var data: Any,
                          var success: Boolean,
                          var error: String)

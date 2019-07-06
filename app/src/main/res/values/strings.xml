@@ -14,5 +14,7 @@
     <string name="wanted">Wanted</string>
     <string name="add_new_wanted">Add New Wanted</string>
     <string name="item_name">item name</string>
+    <string name="about_us">about us</string>
+    <string name="second_text">second text</string>
 
 </resources>

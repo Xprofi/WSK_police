@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class NetworkClient{
+object NetworkClient{
 
 
     private val ROOT_URL_API: String  = "http://mad2019.hakta.pro"
@@ -27,8 +27,8 @@ class NetworkClient{
     }
 
 
-    fun httpClient(): ApiDirectory{
-        return createHttpClient().create(ApiDirectory::class.java)
+    val httpClient : ApiDirectory by lazy {
+         createHttpClient().create(ApiDirectory::class.java)
     }
 
 

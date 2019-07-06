@@ -9,6 +9,7 @@ import ru.petrolplus.wsk_police.main.model.MenuInterface
 import ru.petrolplus.wsk_police.R
 import ru.petrolplus.wsk_police.common.DataObject.ItemListObject
 import ru.petrolplus.wsk_police.common.DataObject.MenuList
+import ru.petrolplus.wsk_police.departments.Departments
 
 
 class MainActivity : BaseActivityFun(), MenuInterface {
@@ -24,7 +25,7 @@ class MainActivity : BaseActivityFun(), MenuInterface {
     override fun onItemClickMenu(itemListObject: ItemListObject) {
         when (itemListObject.typeItem){
             MenuList.CRIMINAL_CASES -> logoutUser()
-            MenuList.DEPARTMENTS -> logoutUser()
+            MenuList.DEPARTMENTS -> startActivity(Departments())
             MenuList.WANTED -> logoutUser()
             MenuList.DETECTIVES -> logoutUser()
             MenuList.PHOTO_ROBOT -> logoutUser()

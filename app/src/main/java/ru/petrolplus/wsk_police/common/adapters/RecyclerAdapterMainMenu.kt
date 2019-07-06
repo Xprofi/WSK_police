@@ -11,7 +11,7 @@ import ru.petrolplus.wsk_police.main.model.MenuInterface
 import ru.petrolplus.wsk_police.R
 import ru.petrolplus.wsk_police.common.DataObject.ItemListObject
 
-class RecyclerAdapterList(private val mContext: Context, private val mData: List<ItemListObject>) : RecyclerView.Adapter<RecyclerAdapterList.ViewHolder>() {
+class RecyclerAdapterMainMenu(private val mContext: Context, private val mData: List<ItemListObject>) : RecyclerView.Adapter<RecyclerAdapterMainMenu.ViewHolder>() {
 
 
 

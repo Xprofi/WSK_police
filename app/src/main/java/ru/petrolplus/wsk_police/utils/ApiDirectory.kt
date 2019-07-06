@@ -11,19 +11,19 @@ interface ApiDirectory {
     abstract fun login(@Query("login") login: String,@Query("password") password: String): Call<Authorization>
 
     @GET("/api/department")
-    abstract fun department(): Call<Department>
+    abstract fun department(): Call<DepartmentAnswer>
 
     @GET("/api/wanted")
-    abstract fun wanted(): Call<Wanted>
+    abstract fun wanted(): Call<Authorization>
 
     @GET("/api/criminal_case")
-    abstract fun criminalCase(): Call<CriminalCase>
+    abstract fun criminalCase(): Call<Authorization>
 
     @POST("/api/criminal_case")
     abstract fun sendCriminalCase(@Body criminalCase: CriminalCase): Call<CriminalCase>
 
     @GET("/api/evidence")
-    abstract fun evidence(): Call<CriminalCase>
+    abstract fun evidence(): Call<Authorization>
 
     @POST("/api/evidence")
     abstract fun sendEvidence(@Body criminalCase: CriminalCase): Call<CriminalCase>
@@ -38,23 +38,10 @@ interface ApiDirectory {
     abstract fun DeleteCriminalCaseImage(@Query("criminal_case_image_id") idImage: Int,@Query("criminal_case_image_id") idCriminalCase: Int): Call<Unit>
 
 
-  /*  //pass it like this
-    File file = new File("/storage/emulated/0/Download/Corrections 6.jpg");
-    RequestBody requestFile =
-    RequestBody.create(MediaType.parse("multipart/form-data"), file);
 
-// MultipartBody.Part is used to send also the actual file name
-    MultipartBody.Part body =
-    MultipartBody.Part.createFormData("image", file.getName(), requestFile);
-
-// add another part within the multipart request
-    RequestBody fullName =
-    RequestBody.create(MediaType.parse("multipart/form-data"), "Your Name");
-
-    service.updateProfile(id, fullName, body, other);*/
 
 
     @GET("/api/lost")
-    abstract fun lost(): Call<Lost>
+    abstract fun lost(): Call<Authorization>
 
 }
