@@ -1,10 +1,8 @@
-package ru.petrolplus.wsk_police.SingIn.model
+package ru.petrolplus.wsk_police.singIn.model
 
 import android.R
 import android.app.Activity
 import android.graphics.*
-import java.io.File
-import kotlin.random.Random
 
 
 class CaptchaGenerator( val captchaSize: Int,

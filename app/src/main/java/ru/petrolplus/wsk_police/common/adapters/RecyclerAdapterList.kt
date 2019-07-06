@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_list.view.*
-import ru.petrolplus.wsk_police.Main.model.MenuInterface
+import ru.petrolplus.wsk_police.main.model.MenuInterface
 import ru.petrolplus.wsk_police.R
 import ru.petrolplus.wsk_police.common.DataObject.ItemListObject
 

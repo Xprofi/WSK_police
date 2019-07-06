@@ -1,4 +1,4 @@
-package ru.petrolplus.wsk_police.Main.model
+package ru.petrolplus.wsk_police.main.model
 
 import ru.petrolplus.wsk_police.R
 import ru.petrolplus.wsk_police.common.DataObject.ItemListObject

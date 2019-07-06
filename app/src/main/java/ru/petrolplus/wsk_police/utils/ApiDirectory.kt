@@ -1,4 +1,4 @@
-package ru.petrolplus.wsk_police.Utils
+package ru.petrolplus.wsk_police.utils
 
 import okhttp3.MultipartBody
 import retrofit2.Call

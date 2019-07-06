@@ -1,12 +1,11 @@
-package ru.petrolplus.wsk_police.SingIn
+package ru.petrolplus.wsk_police.singIn
 
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import ru.petrolplus.wsk_police.BaseActivityFun
-import ru.petrolplus.wsk_police.Main.MainActivity
+import ru.petrolplus.wsk_police.main.MainActivity
 import ru.petrolplus.wsk_police.R
 
 class SingInActivity : BaseActivityFun() {

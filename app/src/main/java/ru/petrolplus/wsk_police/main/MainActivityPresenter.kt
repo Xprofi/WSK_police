@@ -1,8 +1,8 @@
-package ru.petrolplus.wsk_police.Main
+package ru.petrolplus.wsk_police.main
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ru.petrolplus.wsk_police.Main.model.Menu
+import ru.petrolplus.wsk_police.main.model.Menu
 import ru.petrolplus.wsk_police.common.adapters.RecyclerAdapterList
 
 class MainActivityPresenter(val mainActivity: MainActivity) {

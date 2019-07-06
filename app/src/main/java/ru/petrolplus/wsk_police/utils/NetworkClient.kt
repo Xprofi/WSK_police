@@ -1,4 +1,4 @@
-package ru.petrolplus.wsk_police.Utils
+package ru.petrolplus.wsk_police.utils
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

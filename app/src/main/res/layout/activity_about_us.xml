@@ -5,6 +5,23 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AboutUs.AboutUs">
+        tools:context=".aboutUs.AboutUs">
 
+    <TextView
+            android:text="Example app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="284dp" android:textSize="25sp"
+            app:layout_constraintHorizontal_bias="0.498" android:textAlignment="center"/>
+    <TextView
+            android:text="app version"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/version_app" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.064"
+            android:textSize="20sp" android:textAlignment="center"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AboutUs.AboutUs">
+        <activity android:name=".aboutUs.AboutUs">
         </activity>
 
         <meta-data
@@ -20,12 +20,12 @@
                 android:resource="@xml/network_security"/>
 
         <activity
-                android:name=".Main.MainActivity"
+                android:name=".main.MainActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppThemeNoActionBar">
         </activity>
         <activity
-                android:name=".SingIn.SingInActivity"
+                android:name=".singIn.SingInActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppThemeNoActionBar">
             <intent-filter>

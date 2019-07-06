@@ -1,11 +1,11 @@
-package ru.petrolplus.wsk_police.SingIn
+package ru.petrolplus.wsk_police.singIn
 
 import retrofit2.Call
 import retrofit2.Callback
 import ru.petrolplus.wsk_police.BaseActivityFun
 import ru.petrolplus.wsk_police.common.DataObject.Authorization
-import ru.petrolplus.wsk_police.Main.MainActivity
-import ru.petrolplus.wsk_police.Utils.NetworkClient
+import ru.petrolplus.wsk_police.main.MainActivity
+import ru.petrolplus.wsk_police.utils.NetworkClient
 
 class SignInNetwork(var signInPresenter: SignInPresenter) {
 

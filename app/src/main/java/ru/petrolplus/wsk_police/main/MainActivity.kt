@@ -1,10 +1,11 @@
-package ru.petrolplus.wsk_police.Main
+package ru.petrolplus.wsk_police.main
 
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.petrolplus.wsk_police.aboutUs.AboutUs
 import ru.petrolplus.wsk_police.BaseActivityFun
-import ru.petrolplus.wsk_police.Main.model.MenuInterface
+import ru.petrolplus.wsk_police.main.model.MenuInterface
 import ru.petrolplus.wsk_police.R
 import ru.petrolplus.wsk_police.common.DataObject.ItemListObject
 import ru.petrolplus.wsk_police.common.DataObject.MenuList
@@ -27,6 +28,7 @@ class MainActivity : BaseActivityFun(), MenuInterface {
             MenuList.WANTED -> logoutUser()
             MenuList.DETECTIVES -> logoutUser()
             MenuList.PHOTO_ROBOT -> logoutUser()
+            MenuList.ABOUT_US -> startActivity(AboutUs())
             MenuList.LOGOUT -> logoutUser()
         }
 

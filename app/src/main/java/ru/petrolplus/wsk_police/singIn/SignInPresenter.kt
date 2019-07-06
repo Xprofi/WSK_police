@@ -1,4 +1,4 @@
-package ru.petrolplus.wsk_police.SingIn
+package ru.petrolplus.wsk_police.singIn
 
 import android.R
 import android.graphics.Bitmap
@@ -8,7 +8,7 @@ import android.view.View.VISIBLE
 import de.adorsys.android.securestoragelibrary.SecurePreferences
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import ru.petrolplus.wsk_police.BaseActivityFun
-import ru.petrolplus.wsk_police.SingIn.model.CaptchaGenerator
+import ru.petrolplus.wsk_police.singIn.model.CaptchaGenerator
 
 class SignInPresenter(val sigInActivity: SingInActivity) {
 
