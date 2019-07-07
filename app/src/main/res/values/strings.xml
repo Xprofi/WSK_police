@@ -16,5 +16,8 @@
     <string name="item_name">item name</string>
     <string name="about_us">about us</string>
     <string name="second_text">second text</string>
+    <string name="department_name">Department name:</string>
+    <string name="boss">Boss:</string>
+    <string name="address">Address:</string>
 
 </resources>
